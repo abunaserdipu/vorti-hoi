@@ -31,7 +31,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('admin/student-admission', 'StudentController::index');
-$routes->get('admin/admission-circular', 'AdminController::circular');
+$routes->get('admin/admission-circular', 'CircularController::index');
 
 /*
  * --------------------------------------------------------------------

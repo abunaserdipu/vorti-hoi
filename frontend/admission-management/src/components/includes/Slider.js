@@ -25,7 +25,11 @@ export default function Slider() {
         </div>
 
         {/* The slideshow/carousel */}
-        <div className="carousel-inner">
+        <div
+          className="carousel-inner
+          "
+          style={{ width: "100vw", height: "100vh" }}
+        >
           <div className="carousel-item active">
             <img
               src="assets/images/admission-1.jpg"

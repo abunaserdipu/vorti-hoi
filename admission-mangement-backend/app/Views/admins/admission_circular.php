@@ -4,14 +4,19 @@
 
 <div class="col-md-9 bg-light">
     <h1>Admission Circular</h1>
-    <form action="">
+    <form method="post" action="<?= base_url('circularController/create') ?>" enctype="multipart/form-data">
         <div class="form-group mb-3">
             <label for="" class="fw-bold">School Name</label>
             <input type="text" class="form-control" name="school_name" Placeholder="School Name">
         </div>
         <div class="form-group mb-3">
             <label for="" class="fw-bold">Available Classes</label>
-            <input type="text" class="form-control" name="available_classes" Placeholder="ex: class 1 to 9">
+            <select name="available_classes" id="">
+                <option value="">Select one</option>
+                <?php foreach ($circulars as $circular) : ?>
+                    <option value=""><?= $circular['available_classes'] ?></option>
+                <?php endforeach ?>
+            </select>
         </div>
         <div class="form-group mb-3">
             <label for="" class="fw-bold">Relevant Image</label>

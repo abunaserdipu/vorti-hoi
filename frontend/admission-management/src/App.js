@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Static />}>
           <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -10,8 +10,4 @@ class AdminController extends BaseController
     {
         //
     }
-    public function circular()
-    {
-        return view('admins/admission_circular');
-    }
 }
