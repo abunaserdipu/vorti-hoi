@@ -1,0 +1,18 @@
+composer create-project codeigniter4/appstarter admission-mangement-backend
+php spark serve
+
+gitignore:
+note
+
+Features-admin:
+Different schools admission CRUD
+Users review approve or cancel
+Users admission form approve or cancel
+All users report
+Notice crud
+
+Features-user:
+Users review
+User admission form
+User report
+Notice

@@ -1,0 +1,13 @@
+npx create-react-app admission-management
+
+pages:
+Navbar
+Carousel
+Services
+Admission options
+Testimonial
+Footer
+
+packages:
+npm i bootstrap --save;
+npm i react-router-dom;
