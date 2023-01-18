@@ -27,12 +27,17 @@ class Circular extends Migration
             "available_classes" => [
                 "type" => "VARCHAR",
                 "constraint" => 100,
-                "null" => true
+                "null" => false
+            ],
+            "apply_fees" => [
+                "type" => "SMALLINT",
+                "constraint" => 4,
+                "null" => false
             ],
             "circular_image" => [
                 "type" => "VARCHAR",
                 "constraint" => 100,
-                "null" => true
+                "null" => false
             ]
         ]);
         $this->forge->addKey(["id", true]);

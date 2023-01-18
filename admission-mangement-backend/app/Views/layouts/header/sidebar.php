@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <ul class="navbar-nav" style="height: 500px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="admission-circular">Circular</a>
+                        <a class="nav-link" href="<?= base_url('admin/circulars') ?>">Circular</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Admission</a>

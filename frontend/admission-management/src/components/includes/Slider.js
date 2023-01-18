@@ -28,7 +28,7 @@ export default function Slider() {
         <div
           className="carousel-inner
           "
-          style={{ width: "100vw", height: "100vh" }}
+          style={{ height: "100vh" }}
         >
           <div className="carousel-item active">
             <img

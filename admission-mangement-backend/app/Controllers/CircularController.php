@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CircularModel;
+use CodeIgniter\Exceptions\AlertError;
 use CodeIgniter\RESTful\ResourceController;
 
 class CircularController extends ResourceController
@@ -15,8 +16,8 @@ class CircularController extends ResourceController
     public function index()
     {
         $model = new CircularModel();
-        $data['circulars'] = $model->orderBy('id', 'ASC')->findAll();
-        return view('admins/admission_circular', $data);
+        $data['circulars'] = $model->orderBy('id')->findAll();
+        return view('admins/circulars', $data);
     }
 
     /**
@@ -36,7 +37,7 @@ class CircularController extends ResourceController
      */
     public function new()
     {
-        //
+        return view('admins/admission_circular');
     }
 
     /**
@@ -50,6 +51,7 @@ class CircularController extends ResourceController
             'school_name' => 'required|min_length[5]|max_length[100]',
             'circular_details' => 'required|min_length[50]',
             'available_classes' => 'required|min_length[5]',
+            'apply_fees' => 'required|min_length[3]',
             'circular_image' => [
                 // 'uploaded[product_image]',
                 'mime_in[circular_image,image/jpg,image/jpeg,image/png]',
@@ -70,6 +72,10 @@ class CircularController extends ResourceController
                 'required' => 'Available classes must be filled',
                 'min_length' => 'Minimum length is 50!'
             ],
+            'apply_fees' => [
+                'required' => 'Apply fees must be filled',
+                'min_length' => 'Minimum length is 3!'
+            ],
             'circular_image' => [
                 'mime_in' => 'Only jpg, png, jpeg are allowed',
                 'max_size' => 'Not more then 1MB'
@@ -82,19 +88,19 @@ class CircularController extends ResourceController
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         } else {
             $img = $this->request->getFile('circular_image');
-            $path = "assets/" . 'uploads/';
+            $path = "/assets/uploads/";
             $img->move($path);
             $model = new CircularModel();
             $data['school_name'] = $this->request->getPost('school_name');
             $data['available_classes'] = $this->request->getPost('available_classes');
+            $data['apply_fees'] = $this->request->getPost('apply_fees');
             $data['circular_details'] = $this->request->getPost('circular_details');
-            // $data['circular_image'] = $this->request->getPost('circular_image');
             $namepath = $path . $img->getName();
             $data['circular_image'] = $namepath;
 
-            // $model = new ProductModel();
             $model->save($data);
-            return redirect()->to('products')->with('msg', 'Inserted Successfully');
+            echo 'Inserted Successfully';
+            return redirect()->to('admin/circulars')->with('msg', 'Inserted Successfully');
         }
     }
 

@@ -14,7 +14,7 @@ class CircularModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['school_name', 'available_classes', 'circular_details', 'circular_image'];
+    protected $allowedFields    = ['school_name', 'available_classes', 'circular_details', 'circular_image', 'apply_fees'];
 
     // Dates
     protected $useTimestamps = false;

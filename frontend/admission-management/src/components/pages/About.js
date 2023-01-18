@@ -3,10 +3,14 @@ import React from "react";
 export default function About() {
   return (
     <div className="container-fluid" style={{ height: "100vh" }}>
-      <h1 className="text-center fw-bold mb-5">About Us</h1>
+      <h1 className="text-center fw-bold p-5">About Us</h1>
       <div className="row m-0 p-0">
         <div className="col-md-6">
-          <img src="assets/images/about-us.jpg" style={{ width: "100%" }} />
+          <img
+            src="assets/images/about-us.jpg"
+            alt="about-us"
+            style={{ width: "100%" }}
+          />
         </div>
         <div className="col-md-6 d-flex align-items-center">
           <p className="fs-5">
