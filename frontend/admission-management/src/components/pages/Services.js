@@ -10,7 +10,7 @@ export default function Services() {
 
   const getServices = async () => {
     const services = await axios.get(
-      "http://localhost:8080/frontendcontroller/services"
+      "http://localhost:8080/frontend/frontendController/services"
     );
     setServices(services.data);
   };
@@ -47,7 +47,10 @@ export default function Services() {
                       see details
                     </Link>
                   </p>
-                  <a href="abc" className="btn btn-primary">
+                  <a
+                    href="http://localhost:8080/frontend/studentController"
+                    className="btn btn-primary"
+                  >
                     Admission
                   </a>
                 </div>

@@ -13,9 +13,21 @@
             <label for="" class="fw-bold mb-2">Class you want to apply</label>
             <select class="form-control" name="class" id="">
                 <option value="">Select one</option>
-                <option value="">Class One</option>
-                <option value="">Class Two</option>
+                <option value="1">Class one</option>
+                <option value="2">Class Two</option>
+                <option value="3">Class Three</option>
+                <option value="4">Class Four</option>
+                <option value="5">Class Five</option>
+                <option value="6">Class Six</option>
+                <option value="7">Class Seven</option>
+                <option value="8">Class Eight</option>
+                <option value="9">Class Nine</option>
             </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="" class="fw-bold mb-2">Transaction ID (bkash)</label>
+            <small>bkash merchant: 01521327682</small>
+            <input type="text" class="form-control" name="transaction_id" placeholder="ex: xxxxxxx">
         </div>
         <div class="form-group mb-3">
             <label for="" class="fw-bold mb-2">Birth Date</label>
@@ -29,16 +41,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <label for="" class="fw-bold mb-2">Gender</label><br>
-                    <input type="radio" name="gender">
-                    <label for="">Male</label>
-                    <input type="radio" name="gender" class="ms-3">
-                    <label for="">Female</label>
+                    <input type="radio" id="male" name="gender" value="1">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="2" class="ms-3">
+                    <label for="female">Female</label>
                 </div>
                 <div class="col-md-6">
                     <label for="" class="fw-bold mb-2">Nationality</label>
                     <select class="form-control" name="nationality" id="">
-                        <option value="">Select one</option>
-                        <option value="">Bangladeshi</option>
+                        <option value="" selected disabled>Select one</option>
+                        <option value="1">Bangladeshi</option>
                     </select>
                 </div>
             </div>

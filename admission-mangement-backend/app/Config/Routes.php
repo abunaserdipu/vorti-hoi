@@ -33,6 +33,7 @@ $routes->get('/', 'Home::index');
 $routes->get('admin/student-admission', 'StudentController::index');
 $routes->get('admin/circulars', 'CircularController::index');
 $routes->get('admin/circulars/new', 'CircularController::new');
+$routes->get('frontend/studentController ', 'Frontend\StudentController::index');
 
 /*
  * --------------------------------------------------------------------

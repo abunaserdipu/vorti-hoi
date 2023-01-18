@@ -23,3 +23,9 @@ Muslim modern has primary also secondary education facilities. Playground, Labs,
 After fulfilling the admission form students will receive a notice for the preliminary exam. Notice will see after logging VortiHoi website.
 Students will be selected for final admission after the preliminary exam they will pay 5,000 as an admission fee. Admission fees will be given from the VortiHoi website.
 We are excited to give your child a better education!
+
+hostinger mysql database info:
+password: gV>IJVx$HI8
+databaseusername: u318076185_abunaserdipu
+
+databasename: u318076185_vorti_hoi
