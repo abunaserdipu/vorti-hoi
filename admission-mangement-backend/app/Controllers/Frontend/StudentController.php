@@ -57,33 +57,73 @@ class StudentController extends ResourceController
             'street_address' => 'required|min_length[5]|max_length[100]',
             'city' => 'required|min_length[5]|max_length[50]',
             'division' => 'required|min_length[5]|max_length[50]',
-            'zip_code' => 'required||max_length[5]',
+            'zip_code' => 'required|max_length[5]',
             'country' => 'required|min_length[5]|max_length[50]',
             'student_image' => [
                 // 'uploaded[product_image]',
-                'mime_in[circular_image,image/jpg,image/jpeg,image/png]',
-                'max_size[circular_image,1024]',
+                'mime_in[student_image,image/jpg,image/jpeg,image/png]',
+                'max_size[student_image,1024]',
             ]
         ];
         $errors = [
-            'product_name' => [
-                'required' => 'School name must be filled',
+            'student_name' => [
+                'required' => 'Student name must be filled',
                 'min_length' => 'Minimum length is 5!',
                 'max_length' => 'Maximum length is 100!'
             ],
-            'circular_details' => [
-                'required' => 'Circular details must be filled',
-                'min_length' => 'Minimum length is 50!'
+            'class' => [
+                'required' => 'Class must be filled',
             ],
-            'available_classes' => [
-                'required' => 'Available classes must be filled',
-                'min_length' => 'Minimum length is 50!'
+            'birth_date' => [
+                'required' => 'Birth date must be filled',
             ],
-            'apply_fees' => [
-                'required' => 'Apply fees must be filled',
-                'min_length' => 'Minimum length is 3!'
+            'transaction_id' => [
+                'required' => 'Transaction ID must be filled',
             ],
-            'circular_image' => [
+            'guardian_name' => [
+                'required' => 'Guardian name must be filled',
+                'min_length' => 'Minimum length is 5!',
+                'max_length' => 'Maximum length is 100!'
+            ],
+            'gender' => [
+                'required' => 'Gender must be filled',
+            ],
+            'nationality' => [
+                'required' => 'Nationality must be filled',
+            ],
+            'phone' => [
+                'required' => 'Phone must be filled',
+                'max_length' => 'Maximum length is 30!'
+            ],
+            'email' => [
+                'required' => 'Email must be filled',
+                'max_length' => 'Maximum length is 100!'
+            ],
+            'street_address' => [
+                'required' => 'Street address must be filled',
+                'min_length' => 'Minimum length is 5!',
+                'max_length' => 'Maximum length is 100!'
+            ],
+            'city' => [
+                'required' => 'City must be filled',
+                'min_length' => 'Minimum length is 5!',
+                'max_length' => 'Maximum length is 50!'
+            ],
+            'division' => [
+                'required' => 'Division must be filled',
+                'min_length' => 'Minimum length is 5!',
+                'max_length' => 'Maximum length is 50!'
+            ],
+            'zip_code' => [
+                'required' => 'Zip code must be filled',
+                'max_length' => 'Maximum length is 5!'
+            ],
+            'country' => [
+                'required' => 'Country must be filled',
+                'min_length' => 'Minimum length is 5!',
+                'max_length' => 'Maximum length is 50!'
+            ],
+            'student_image' => [
                 'mime_in' => 'Only jpg, png, jpeg are allowed',
                 'max_size' => 'Not more then 1MB'
             ],
@@ -94,16 +134,26 @@ class StudentController extends ResourceController
         if (!$validate) {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         } else {
-            $img = $this->request->getFile('circular_image');
+            $img = $this->request->getFile('student_image');
             $path = "/assets/uploads/";
             $img->move($path);
             $model = new StudentModel();
-            $data['school_name'] = $this->request->getPost('school_name');
-            $data['available_classes'] = $this->request->getPost('available_classes');
-            $data['apply_fees'] = $this->request->getPost('apply_fees');
-            $data['circular_details'] = $this->request->getPost('circular_details');
+            $data['student_name'] = $this->request->getPost('student_name');
+            $data['class'] = $this->request->getPost('class');
+            $data['birth_date'] = $this->request->getPost('birth_date');
+            $data['transaction_id'] = $this->request->getPost('transaction_id');
+            $data['guardian_name'] = $this->request->getPost('guardian_name');
+            $data['gender'] = $this->request->getPost('gender');
+            $data['nationality'] = $this->request->getPost('nationality');
+            $data['phone'] = $this->request->getPost('phone');
+            $data['email'] = $this->request->getPost('email');
+            $data['street_address'] = $this->request->getPost('street_address');
+            $data['city'] = $this->request->getPost('city');
+            $data['division'] = $this->request->getPost('division');
+            $data['zip_code'] = $this->request->getPost('zip_code');
+            $data['country'] = $this->request->getPost('country');
             $namepath = $path . $img->getName();
-            $data['circular_image'] = $namepath;
+            $data['student_image'] = $namepath;
 
             $model->save($data);
             echo 'Inserted Successfully';

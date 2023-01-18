@@ -10,24 +10,38 @@ class StudentSeeder extends Seeder
     {
         $datas = [
             [
-                'school_name' => 'Muslim Modern School',
-                'available_classes'    => 'class 1 to 5',
-                'apply_fees' => '500',
-                'circular_details'    => 'Muslim Modern School has primary also secondary education facilities. Playground, Labs, and Library are all facilities gathered will need for a good education environment. Admit your child here to give him or her a better education.
-            After fulfilling the admission form students will receive a notice for the preliminary exam. Notice will see after logging VortiHoi website.
-            Students will be selected for final admission after the preliminary exam they will pay 5,000 as an admission fee. Admission fees will be given from the VortiHoi website.
-            We are excited to give your child a better education!',
-                'circular_image' => '/assets/uploads/school.jpg',
+                'student_name' => 'Mehedi Hasan',
+                'class' => '9',
+                'birth_date' => '1june2017',
+                'transaction_id' => 'dskuewojdslkj',
+                'guardian_name' => 'Md. Nurul Islam',
+                'gender' => '1',
+                'nationality' => '1',
+                'phone' => '01245785',
+                'email' => 'mehedi@gmail.com',
+                'street_address' => 'Puraton Kachukhet',
+                'city' => 'Mirpur',
+                'division' => 'Dhaka',
+                'zip_code' => '1206',
+                'country' => 'Bangladesh',
+                'student_image' => '/assets/uploads/student.jpg'
             ],
             [
-                'school_name' => 'Adamjee Cantonment School',
-                'available_classes'    => 'class 1 to 9',
-                'apply_fees' => '500',
-                'circular_details'    => 'Adamjee Cantonment School has primary also secondary education facilities. Playground, Labs, and Library are all facilities gathered will need for a good education environment. Admit your child here to give him or her a better education.
-            After fulfilling the admission form students will receive a notice for the preliminary exam. Notice will see after logging VortiHoi website.
-            Students will be selected for final admission after the preliminary exam they will pay 5,000 as an admission fee. Admission fees will be given from the VortiHoi website.
-            We are excited to give your child a better education!',
-                'circular_image' => '/assets/uploads/school.jpg',
+                'student_name' => 'Mehedi Hasan',
+                'class' => '9',
+                'birth_date' => '1june2017',
+                'transaction_id' => 'dskuewojdslkj',
+                'guardian_name' => 'Md. Nurul Islam',
+                'gender' => '1',
+                'nationality' => '1',
+                'phone' => '01245785',
+                'email' => 'mehedi@gmail.com',
+                'street_address' => 'Puraton Kachukhet',
+                'city' => 'Mirpur',
+                'division' => 'Dhaka',
+                'zip_code' => '1206',
+                'country' => 'Bangladesh',
+                'student_image' => '/assets/uploads/student.jpg'
             ]
         ];
         // $this->db->table('circulars')->insert($datas);
