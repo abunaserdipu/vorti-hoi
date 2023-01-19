@@ -29,12 +29,23 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('admin/student-admission', 'StudentController::index');
-$routes->get('admin/circulars', 'CircularController::index');
-$routes->get('admin/circulars/new', 'CircularController::new');
-$routes->get('frontend/studentController ', 'Frontend\StudentController::index');
+$routes->get('/', 'Home::index', ['filter' => 'authGuard']);
+$routes->get('admin/student-admission', 'StudentController::index', ['filter' => 'authGuard']);
+// $routes->get('admin/circulars', 'CircularController::index');
+$routes->get('admin', 'CircularController::index', ['filter' => 'authGuard']);
+$routes->get('admin/circulars/new', 'CircularController::new', ['filter' => 'authGuard']);
+$routes->get('applications', 'ApplicationController::index', ['filter' => 'authGuard']);
+$routes->get('frontend/studentController ', 'Frontend\StudentController::index', ['filter' => 'authGuard']);
+$routes->get('user/signup', 'SignupController::index');
+$routes->post('user/store', 'SignupController::store');
 $routes->get('user/signin', 'SigninController::index');
+$routes->post('user/login', 'SigninController::auth');
+$routes->get('user/logout', 'SigninController::logout');
+$routes->get('user/frontend/signup', 'Frontend\SignupController::index');
+$routes->post('user/frontend/store', 'Frontend\SignupController::store');
+$routes->get('user/frontend/signin', 'Frontend\SigninController::index');
+$routes->post('user/frontend/login', 'Frontend\SigninController::auth');
+$routes->get('user/frontend/logout', 'Frontend\SigninController::logout');
 
 /*
  * --------------------------------------------------------------------

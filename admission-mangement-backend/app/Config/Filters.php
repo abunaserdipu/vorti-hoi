@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Filters\AuthGuard;
 use App\Filters\Cors;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;

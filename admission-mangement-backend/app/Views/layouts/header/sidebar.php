@@ -7,7 +7,7 @@
                         <a class="nav-link" href="<?= base_url('admin/circulars') ?>">Circular</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Admission</a>
+                        <a class="nav-link" href="<?= base_url('applications') ?>">Applications</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Notice</a>

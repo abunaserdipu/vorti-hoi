@@ -84,6 +84,11 @@ class Students extends Migration
                 "constraint" => 50,
                 "null" => false
             ],
+            "result" => [
+                "type" => "TINYINT",
+                "constraint" => 1,
+                "null" => false
+            ],
             "student_image" => [
                 "type" => "VARCHAR",
                 "constraint" => 100,
@@ -96,6 +101,6 @@ class Students extends Migration
 
     public function down()
     {
-        $this->forge->dropTable("circulars");
+        $this->forge->dropTable("students");
     }
 }

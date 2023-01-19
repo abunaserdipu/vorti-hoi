@@ -28,7 +28,27 @@ class CircularSeeder extends Seeder
             Students will be selected for final admission after the preliminary exam they will pay 5,000 as an admission fee. Admission fees will be given from the VortiHoi website.
             We are excited to give your child a better education!',
                 'circular_image' => '/assets/uploads/school.jpg',
-            ]
+            ],
+            [
+                'school_name' => 'Bangladesh Navy School',
+                'available_classes'    => 'class 1 to 9',
+                'apply_fees' => '500',
+                'circular_details'    => 'Bangladesh Navy School has primary also secondary education facilities. Playground, Labs, and Library are all facilities gathered will need for a good education environment. Admit your child here to give him or her a better education.
+            After fulfilling the admission form students will receive a notice for the preliminary exam. Notice will see after logging VortiHoi website.
+            Students will be selected for final admission after the preliminary exam they will pay 5,000 as an admission fee. Admission fees will be given from the VortiHoi website.
+            We are excited to give your child a better education!',
+                'circular_image' => '/assets/uploads/school.jpg',
+            ],
+            [
+                'school_name' => 'Police Smriti School',
+                'available_classes'    => 'class 1 to 9',
+                'apply_fees' => '500',
+                'circular_details'    => 'Police Smriti School has primary also secondary education facilities. Playground, Labs, and Library are all facilities gathered will need for a good education environment. Admit your child here to give him or her a better education.
+            After fulfilling the admission form students will receive a notice for the preliminary exam. Notice will see after logging VortiHoi website.
+            Students will be selected for final admission after the preliminary exam they will pay 5,000 as an admission fee. Admission fees will be given from the VortiHoi website.
+            We are excited to give your child a better education!',
+                'circular_image' => '/assets/uploads/school.jpg',
+            ],
         ];
         // $this->db->table('circulars')->insert($datas);
 

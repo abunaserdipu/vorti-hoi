@@ -16,6 +16,7 @@ class StudentModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'student_name', 'class', 'birth_date', 'transaction_id',
+        'result',
         'guardian_name',
         'gender',
         'nationality',

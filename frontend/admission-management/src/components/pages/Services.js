@@ -10,11 +10,11 @@ export default function Services() {
 
   const getServices = async () => {
     const services = await axios.get(
-      "http://localhost:8080/frontend/frontendController/services"
+      "https://vortihoi.bdprogrammers.com/backend/frontend/frontendController/services"
     );
     setServices(services.data);
   };
-  const http = "http://localhost:8080/";
+  const http = "https://vortihoi.bdprogrammers.com/backend/";
   //   const deleteProduct = async (id) => {
   //     await axios.delete(`http://localhost:8080/frontend/services/${id}`);
   //     getServices();
@@ -30,7 +30,7 @@ export default function Services() {
         <div className="row m-0 p-0">
           {services.map((service) => (
             <div className="col-md-3" key={service.id}>
-              <div className="card" style={{ width: "18rem;" }}>
+              <div className="card shadow" style={{ width: "18rem;" }}>
                 <img
                   src={http + service.circular_image}
                   className="card-img-top"
@@ -48,7 +48,7 @@ export default function Services() {
                     </Link>
                   </p>
                   <a
-                    href="http://localhost:8080/frontend/studentController"
+                    href="https://vortihoi.bdprogrammers.com/backend/user/frontend/signin"
                     className="btn btn-primary"
                   >
                     Admission

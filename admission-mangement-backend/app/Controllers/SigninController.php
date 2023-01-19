@@ -32,7 +32,7 @@ class SigninController extends BaseController
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/admin');
+                return redirect()->to('admin');
             } else {
                 $session->setFlashdata('msg', 'Password is incorrect.');
                 return redirect()->back()->withInput();
@@ -48,6 +48,6 @@ class SigninController extends BaseController
         $session = session();
         //print_r($_SESSION);
         $session->destroy();
-        return redirect()->to("/users/signin");
+        return redirect()->to("user/frontend/signin");
     }
 }

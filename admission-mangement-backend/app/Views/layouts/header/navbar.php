@@ -14,5 +14,6 @@
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li>
         </ul>
+        <a href="<?= base_url('user/logout') ?>" class="btn btn-danger">Logout</a>
     </div>
 </nav>
