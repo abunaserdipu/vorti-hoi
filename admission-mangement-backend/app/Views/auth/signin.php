@@ -26,7 +26,7 @@
             <br>
             <div class="text-center"><a class="text-decoration-none" href="<?php echo base_url("user/signup"); ?>">New User? need signup</a></div>
         </div>
-
+        <?= ROOTPATH ?>
     </div>
 </div>
 <?php echo view('layouts/footer/footer.php');

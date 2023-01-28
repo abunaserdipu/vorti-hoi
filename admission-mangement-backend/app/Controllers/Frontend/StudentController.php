@@ -152,6 +152,7 @@ class StudentController extends ResourceController
             $data['division'] = $this->request->getPost('division');
             $data['zip_code'] = $this->request->getPost('zip_code');
             $data['country'] = $this->request->getPost('country');
+            $data['result'] = $this->request->getPost('result');
             $namepath = $path . $img->getName();
             $data['student_image'] = $namepath;
 
